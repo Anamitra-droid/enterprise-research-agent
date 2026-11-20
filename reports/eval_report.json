@@ -1,0 +1,1116 @@
+{
+  "generated_at": "2026-11-20 18:44:14",
+  "llm": "mock",
+  "web": "mock",
+  "embeddings": "huggingface",
+  "n_items": 30,
+  "retrieval": {
+    "k": 5,
+    "n": 26,
+    "hit@5": 1.0,
+    "recall@5": 1.0,
+    "mrr": 0.981,
+    "rows": [
+      {
+        "id": "q01",
+        "hit": true,
+        "recall": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "hr-leave-policy",
+          "remote-work-expenses",
+          "merchant-onboarding",
+          "salary-bands-2026",
+          "product-cards"
+        ]
+      },
+      {
+        "id": "q02",
+        "hit": true,
+        "recall": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "hr-leave-policy",
+          "remote-work-expenses",
+          "regulatory-watch-2024",
+          "data-retention-gdpr"
+        ]
+      },
+      {
+        "id": "q03",
+        "hit": true,
+        "recall": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "sla",
+          "data-retention-gdpr",
+          "incident-response",
+          "api-guide",
+          "merchant-onboarding"
+        ]
+      },
+      {
+        "id": "q04",
+        "hit": true,
+        "recall": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "sla",
+          "incident-response",
+          "fraud-risk-rules",
+          "pricing-and-fees",
+          "q2-2026-report"
+        ]
+      },
+      {
+        "id": "q05",
+        "hit": true,
+        "recall": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "api-guide",
+          "incident-response",
+          "sla",
+          "fraud-risk-rules",
+          "security-pci-policy"
+        ]
+      },
+      {
+        "id": "q06",
+        "hit": true,
+        "recall": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "api-guide",
+          "data-retention-gdpr",
+          "product-cards",
+          "sla",
+          "incident-response"
+        ]
+      },
+      {
+        "id": "q07",
+        "hit": true,
+        "recall": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "pricing-and-fees",
+          "merchant-onboarding",
+          "remote-work-expenses",
+          "fraud-risk-rules",
+          "competitor-analysis-2025"
+        ]
+      },
+      {
+        "id": "q08",
+        "hit": true,
+        "recall": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "pricing-and-fees",
+          "fraud-risk-rules",
+          "regulatory-watch-2024",
+          "competitor-analysis-2025",
+          "product-cards"
+        ]
+      },
+      {
+        "id": "q09",
+        "hit": true,
+        "recall": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "kyc-aml-policy",
+          "data-retention-gdpr",
+          "incident-response",
+          "regulatory-watch-2024",
+          "hr-leave-policy"
+        ]
+      },
+      {
+        "id": "q10",
+        "hit": true,
+        "recall": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "kyc-aml-policy",
+          "merchant-onboarding",
+          "treasury-policy",
+          "fraud-risk-rules",
+          "q3-2026-report"
+        ]
+      },
+      {
+        "id": "q11",
+        "hit": true,
+        "recall": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "security-pci-policy",
+          "api-guide",
+          "data-retention-gdpr",
+          "kyc-aml-policy",
+          "regulatory-watch-2024"
+        ]
+      },
+      {
+        "id": "q12",
+        "hit": true,
+        "recall": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "security-pci-policy",
+          "data-retention-gdpr",
+          "incident-response",
+          "fraud-risk-rules",
+          "kyc-aml-policy"
+        ]
+      },
+      {
+        "id": "q13",
+        "hit": true,
+        "recall": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "data-retention-gdpr",
+          "kyc-aml-policy",
+          "treasury-policy",
+          "security-pci-policy",
+          "incident-response"
+        ]
+      },
+      {
+        "id": "q14",
+        "hit": true,
+        "recall": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "incident-response",
+          "sla",
+          "data-retention-gdpr",
+          "api-guide",
+          "kyc-aml-policy"
+        ]
+      },
+      {
+        "id": "q15",
+        "hit": true,
+        "recall": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "remote-work-expenses",
+          "hr-leave-policy",
+          "salary-bands-2026",
+          "sla",
+          "merchant-onboarding"
+        ]
+      },
+      {
+        "id": "q16",
+        "hit": true,
+        "recall": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "q3-2026-report",
+          "q2-2026-report",
+          "treasury-policy",
+          "pricing-and-fees",
+          "board-minutes-q3-2026"
+        ]
+      },
+      {
+        "id": "q17",
+        "hit": true,
+        "recall": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "q2-2026-report",
+          "q3-2026-report",
+          "board-minutes-q3-2026",
+          "project-falcon",
+          "treasury-policy"
+        ]
+      },
+      {
+        "id": "q18",
+        "hit": true,
+        "recall": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "merchant-onboarding",
+          "product-cards",
+          "remote-work-expenses",
+          "treasury-policy",
+          "fraud-risk-rules"
+        ]
+      },
+      {
+        "id": "q19",
+        "hit": true,
+        "recall": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "product-cards",
+          "sla",
+          "competitor-analysis-2025",
+          "company-overview",
+          "fraud-risk-rules"
+        ]
+      },
+      {
+        "id": "q20",
+        "hit": true,
+        "recall": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud-risk-rules",
+          "regulatory-watch-2024",
+          "pricing-and-fees",
+          "kyc-aml-policy",
+          "treasury-policy"
+        ]
+      },
+      {
+        "id": "q24",
+        "hit": true,
+        "recall": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "competitor-analysis-2025",
+          "pricing-and-fees",
+          "merchant-onboarding",
+          "fraud-risk-rules",
+          "q2-2026-report"
+        ]
+      },
+      {
+        "id": "q25",
+        "hit": true,
+        "recall": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "treasury-policy",
+          "kyc-aml-policy",
+          "regulatory-watch-2024",
+          "project-falcon",
+          "sla"
+        ]
+      },
+      {
+        "id": "q26",
+        "hit": true,
+        "recall": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "fraud-risk-rules",
+          "regulatory-watch-2024",
+          "pricing-and-fees",
+          "treasury-policy",
+          "kyc-aml-policy"
+        ]
+      },
+      {
+        "id": "q27",
+        "hit": true,
+        "recall": 1.0,
+        "rr": 0.5,
+        "retrieved": [
+          "treasury-policy",
+          "kyc-aml-policy",
+          "data-retention-gdpr",
+          "competitor-analysis-2025",
+          "pricing-and-fees"
+        ]
+      },
+      {
+        "id": "q28",
+        "hit": true,
+        "recall": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "api-guide",
+          "fraud-risk-rules",
+          "security-pci-policy",
+          "data-retention-gdpr",
+          "incident-response"
+        ]
+      },
+      {
+        "id": "q29",
+        "hit": true,
+        "recall": 1.0,
+        "rr": 1.0,
+        "retrieved": [
+          "pricing-and-fees",
+          "competitor-analysis-2025",
+          "fraud-risk-rules",
+          "merchant-onboarding",
+          "product-cards"
+        ]
+      }
+    ]
+  },
+  "routing": {
+    "n": 30,
+    "accuracy": 0.9,
+    "confusion": {
+      "internal": {
+        "internal": 19,
+        "both": 2
+      },
+      "web": {
+        "web": 2,
+        "both": 1
+      },
+      "both": {
+        "both": 4
+      },
+      "clarify": {
+        "clarify": 2
+      }
+    },
+    "rows": [
+      {
+        "id": "q01",
+        "expected": "internal",
+        "predicted": "internal",
+        "correct": true
+      },
+      {
+        "id": "q02",
+        "expected": "internal",
+        "predicted": "internal",
+        "correct": true
+      },
+      {
+        "id": "q03",
+        "expected": "internal",
+        "predicted": "internal",
+        "correct": true
+      },
+      {
+        "id": "q04",
+        "expected": "internal",
+        "predicted": "internal",
+        "correct": true
+      },
+      {
+        "id": "q05",
+        "expected": "internal",
+        "predicted": "internal",
+        "correct": true
+      },
+      {
+        "id": "q06",
+        "expected": "internal",
+        "predicted": "internal",
+        "correct": true
+      },
+      {
+        "id": "q07",
+        "expected": "internal",
+        "predicted": "internal",
+        "correct": true
+      },
+      {
+        "id": "q08",
+        "expected": "internal",
+        "predicted": "internal",
+        "correct": true
+      },
+      {
+        "id": "q09",
+        "expected": "internal",
+        "predicted": "internal",
+        "correct": true
+      },
+      {
+        "id": "q10",
+        "expected": "internal",
+        "predicted": "internal",
+        "correct": true
+      },
+      {
+        "id": "q11",
+        "expected": "internal",
+        "predicted": "internal",
+        "correct": true
+      },
+      {
+        "id": "q12",
+        "expected": "internal",
+        "predicted": "internal",
+        "correct": true
+      },
+      {
+        "id": "q13",
+        "expected": "internal",
+        "predicted": "internal",
+        "correct": true
+      },
+      {
+        "id": "q14",
+        "expected": "internal",
+        "predicted": "internal",
+        "correct": true
+      },
+      {
+        "id": "q15",
+        "expected": "internal",
+        "predicted": "internal",
+        "correct": true
+      },
+      {
+        "id": "q16",
+        "expected": "internal",
+        "predicted": "both",
+        "correct": false
+      },
+      {
+        "id": "q17",
+        "expected": "internal",
+        "predicted": "both",
+        "correct": false
+      },
+      {
+        "id": "q18",
+        "expected": "internal",
+        "predicted": "internal",
+        "correct": true
+      },
+      {
+        "id": "q19",
+        "expected": "internal",
+        "predicted": "internal",
+        "correct": true
+      },
+      {
+        "id": "q20",
+        "expected": "internal",
+        "predicted": "internal",
+        "correct": true
+      },
+      {
+        "id": "q21",
+        "expected": "web",
+        "predicted": "web",
+        "correct": true
+      },
+      {
+        "id": "q22",
+        "expected": "web",
+        "predicted": "web",
+        "correct": true
+      },
+      {
+        "id": "q23",
+        "expected": "web",
+        "predicted": "both",
+        "correct": false
+      },
+      {
+        "id": "q24",
+        "expected": "both",
+        "predicted": "both",
+        "correct": true
+      },
+      {
+        "id": "q25",
+        "expected": "both",
+        "predicted": "both",
+        "correct": true
+      },
+      {
+        "id": "q26",
+        "expected": "both",
+        "predicted": "both",
+        "correct": true
+      },
+      {
+        "id": "q27",
+        "expected": "both",
+        "predicted": "both",
+        "correct": true
+      },
+      {
+        "id": "q28",
+        "expected": "clarify",
+        "predicted": "clarify",
+        "correct": true
+      },
+      {
+        "id": "q29",
+        "expected": "clarify",
+        "predicted": "clarify",
+        "correct": true
+      },
+      {
+        "id": "q30",
+        "expected": "internal",
+        "predicted": "internal",
+        "correct": true
+      }
+    ]
+  },
+  "answers": {
+    "n": 30,
+    "faithfulness": 0.718,
+    "answer_relevance": 0.892,
+    "citation_quality": 0.762,
+    "completeness": 0.883,
+    "groundedness": 1.0,
+    "conflict_detection_rate": 1.0,
+    "abstention_rate_on_unanswerable": 1.0,
+    "avg_latency_ms": 49.8,
+    "rows": [
+      {
+        "id": "q01",
+        "status": "answered",
+        "route": "internal",
+        "events": [],
+        "latency_ms": 91,
+        "n_citations": 4,
+        "n_conflicts": 0,
+        "groundedness": 1.0,
+        "confidence": 0.9,
+        "conflict_ok": null,
+        "abstain_ok": null,
+        "faithfulness": 0.843,
+        "answer_relevance": 1.0,
+        "citation_quality": 0.857,
+        "completeness": 0.923,
+        "rationale": "heuristic mock judge (lexical overlap)"
+      },
+      {
+        "id": "q02",
+        "status": "answered",
+        "route": "internal",
+        "events": [],
+        "latency_ms": 41,
+        "n_citations": 1,
+        "n_conflicts": 0,
+        "groundedness": 1.0,
+        "confidence": 0.69,
+        "conflict_ok": null,
+        "abstain_ok": null,
+        "faithfulness": 0.615,
+        "answer_relevance": 0.96,
+        "citation_quality": 0.75,
+        "completeness": 1.0,
+        "rationale": "heuristic mock judge (lexical overlap)"
+      },
+      {
+        "id": "q03",
+        "status": "answered",
+        "route": "internal",
+        "events": [],
+        "latency_ms": 43,
+        "n_citations": 2,
+        "n_conflicts": 0,
+        "groundedness": 1.0,
+        "confidence": 0.61,
+        "conflict_ok": null,
+        "abstain_ok": null,
+        "faithfulness": 0.871,
+        "answer_relevance": 0.8,
+        "citation_quality": 0.667,
+        "completeness": 1.0,
+        "rationale": "heuristic mock judge (lexical overlap)"
+      },
+      {
+        "id": "q04",
+        "status": "answered",
+        "route": "internal",
+        "events": [],
+        "latency_ms": 46,
+        "n_citations": 3,
+        "n_conflicts": 0,
+        "groundedness": 1.0,
+        "confidence": 0.85,
+        "conflict_ok": null,
+        "abstain_ok": null,
+        "faithfulness": 0.911,
+        "answer_relevance": 1.0,
+        "citation_quality": 0.833,
+        "completeness": 1.0,
+        "rationale": "heuristic mock judge (lexical overlap)"
+      },
+      {
+        "id": "q05",
+        "status": "answered",
+        "route": "internal",
+        "events": [],
+        "latency_ms": 49,
+        "n_citations": 4,
+        "n_conflicts": 0,
+        "groundedness": 1.0,
+        "confidence": 0.9,
+        "conflict_ok": null,
+        "abstain_ok": null,
+        "faithfulness": 0.884,
+        "answer_relevance": 1.0,
+        "citation_quality": 0.875,
+        "completeness": 1.0,
+        "rationale": "heuristic mock judge (lexical overlap)"
+      },
+      {
+        "id": "q06",
+        "status": "answered",
+        "route": "internal",
+        "events": [],
+        "latency_ms": 47,
+        "n_citations": 1,
+        "n_conflicts": 0,
+        "groundedness": 1.0,
+        "confidence": 0.61,
+        "conflict_ok": null,
+        "abstain_ok": null,
+        "faithfulness": 0.625,
+        "answer_relevance": 0.9,
+        "citation_quality": 0.667,
+        "completeness": 0.875,
+        "rationale": "heuristic mock judge (lexical overlap)"
+      },
+      {
+        "id": "q07",
+        "status": "answered",
+        "route": "internal",
+        "events": [],
+        "latency_ms": 42,
+        "n_citations": 3,
+        "n_conflicts": 0,
+        "groundedness": 1.0,
+        "confidence": 0.9,
+        "conflict_ok": null,
+        "abstain_ok": null,
+        "faithfulness": 0.831,
+        "answer_relevance": 1.0,
+        "citation_quality": 0.875,
+        "completeness": 0.889,
+        "rationale": "heuristic mock judge (lexical overlap)"
+      },
+      {
+        "id": "q08",
+        "status": "answered",
+        "route": "internal",
+        "events": [],
+        "latency_ms": 42,
+        "n_citations": 4,
+        "n_conflicts": 0,
+        "groundedness": 1.0,
+        "confidence": 0.9,
+        "conflict_ok": null,
+        "abstain_ok": null,
+        "faithfulness": 0.775,
+        "answer_relevance": 0.9,
+        "citation_quality": 0.857,
+        "completeness": 1.0,
+        "rationale": "heuristic mock judge (lexical overlap)"
+      },
+      {
+        "id": "q09",
+        "status": "answered",
+        "route": "internal",
+        "events": [],
+        "latency_ms": 46,
+        "n_citations": 4,
+        "n_conflicts": 0,
+        "groundedness": 1.0,
+        "confidence": 0.85,
+        "conflict_ok": null,
+        "abstain_ok": null,
+        "faithfulness": 0.769,
+        "answer_relevance": 0.857,
+        "citation_quality": 0.833,
+        "completeness": 1.0,
+        "rationale": "heuristic mock judge (lexical overlap)"
+      },
+      {
+        "id": "q10",
+        "status": "answered",
+        "route": "internal",
+        "events": [],
+        "latency_ms": 44,
+        "n_citations": 3,
+        "n_conflicts": 0,
+        "groundedness": 1.0,
+        "confidence": 0.85,
+        "conflict_ok": null,
+        "abstain_ok": null,
+        "faithfulness": 0.712,
+        "answer_relevance": 1.0,
+        "citation_quality": 0.833,
+        "completeness": 0.909,
+        "rationale": "heuristic mock judge (lexical overlap)"
+      },
+      {
+        "id": "q11",
+        "status": "answered",
+        "route": "internal",
+        "events": [],
+        "latency_ms": 43,
+        "n_citations": 3,
+        "n_conflicts": 0,
+        "groundedness": 1.0,
+        "confidence": 0.77,
+        "conflict_ok": null,
+        "abstain_ok": null,
+        "faithfulness": 0.692,
+        "answer_relevance": 0.9,
+        "citation_quality": 0.8,
+        "completeness": 1.0,
+        "rationale": "heuristic mock judge (lexical overlap)"
+      },
+      {
+        "id": "q12",
+        "status": "answered",
+        "route": "internal",
+        "events": [],
+        "latency_ms": 43,
+        "n_citations": 1,
+        "n_conflicts": 0,
+        "groundedness": 1.0,
+        "confidence": 0.53,
+        "conflict_ok": null,
+        "abstain_ok": null,
+        "faithfulness": 0.688,
+        "answer_relevance": 0.9,
+        "citation_quality": 0.5,
+        "completeness": 1.0,
+        "rationale": "heuristic mock judge (lexical overlap)"
+      },
+      {
+        "id": "q13",
+        "status": "answered",
+        "route": "internal",
+        "events": [],
+        "latency_ms": 41,
+        "n_citations": 3,
+        "n_conflicts": 0,
+        "groundedness": 1.0,
+        "confidence": 0.77,
+        "conflict_ok": null,
+        "abstain_ok": null,
+        "faithfulness": 0.737,
+        "answer_relevance": 0.6,
+        "citation_quality": 0.8,
+        "completeness": 1.0,
+        "rationale": "heuristic mock judge (lexical overlap)"
+      },
+      {
+        "id": "q14",
+        "status": "answered",
+        "route": "internal",
+        "events": [],
+        "latency_ms": 46,
+        "n_citations": 2,
+        "n_conflicts": 0,
+        "groundedness": 1.0,
+        "confidence": 0.77,
+        "conflict_ok": null,
+        "abstain_ok": null,
+        "faithfulness": 0.838,
+        "answer_relevance": 0.857,
+        "citation_quality": 0.8,
+        "completeness": 0.875,
+        "rationale": "heuristic mock judge (lexical overlap)"
+      },
+      {
+        "id": "q15",
+        "status": "answered",
+        "route": "internal",
+        "events": [],
+        "latency_ms": 44,
+        "n_citations": 4,
+        "n_conflicts": 0,
+        "groundedness": 1.0,
+        "confidence": 0.77,
+        "conflict_ok": null,
+        "abstain_ok": null,
+        "faithfulness": 0.84,
+        "answer_relevance": 1.0,
+        "citation_quality": 0.8,
+        "completeness": 1.0,
+        "rationale": "heuristic mock judge (lexical overlap)"
+      },
+      {
+        "id": "q16",
+        "status": "answered",
+        "route": "both",
+        "events": [],
+        "latency_ms": 55,
+        "n_citations": 6,
+        "n_conflicts": 1,
+        "groundedness": 1.0,
+        "confidence": 0.9,
+        "conflict_ok": null,
+        "abstain_ok": null,
+        "faithfulness": 0.705,
+        "answer_relevance": 1.0,
+        "citation_quality": 0.8,
+        "completeness": 1.0,
+        "rationale": "heuristic mock judge (lexical overlap)"
+      },
+      {
+        "id": "q17",
+        "status": "answered",
+        "route": "both",
+        "events": [
+          "approval:confidential_data"
+        ],
+        "latency_ms": 64,
+        "n_citations": 7,
+        "n_conflicts": 0,
+        "groundedness": 1.0,
+        "confidence": 0.9,
+        "conflict_ok": null,
+        "abstain_ok": null,
+        "faithfulness": 0.653,
+        "answer_relevance": 1.0,
+        "citation_quality": 0.818,
+        "completeness": 0.75,
+        "rationale": "heuristic mock judge (lexical overlap)"
+      },
+      {
+        "id": "q18",
+        "status": "answered",
+        "route": "internal",
+        "events": [],
+        "latency_ms": 45,
+        "n_citations": 2,
+        "n_conflicts": 0,
+        "groundedness": 1.0,
+        "confidence": 0.61,
+        "conflict_ok": null,
+        "abstain_ok": null,
+        "faithfulness": 0.694,
+        "answer_relevance": 0.48,
+        "citation_quality": 0.667,
+        "completeness": 0.667,
+        "rationale": "heuristic mock judge (lexical overlap)"
+      },
+      {
+        "id": "q19",
+        "status": "answered",
+        "route": "internal",
+        "events": [],
+        "latency_ms": 49,
+        "n_citations": 4,
+        "n_conflicts": 0,
+        "groundedness": 1.0,
+        "confidence": 0.85,
+        "conflict_ok": null,
+        "abstain_ok": null,
+        "faithfulness": 0.803,
+        "answer_relevance": 1.0,
+        "citation_quality": 0.833,
+        "completeness": 0.875,
+        "rationale": "heuristic mock judge (lexical overlap)"
+      },
+      {
+        "id": "q20",
+        "status": "answered",
+        "route": "internal",
+        "events": [],
+        "latency_ms": 45,
+        "n_citations": 4,
+        "n_conflicts": 0,
+        "groundedness": 1.0,
+        "confidence": 0.85,
+        "conflict_ok": null,
+        "abstain_ok": null,
+        "faithfulness": 0.702,
+        "answer_relevance": 1.0,
+        "citation_quality": 0.833,
+        "completeness": 1.0,
+        "rationale": "heuristic mock judge (lexical overlap)"
+      },
+      {
+        "id": "q21",
+        "status": "answered",
+        "route": "web",
+        "events": [],
+        "latency_ms": 28,
+        "n_citations": 3,
+        "n_conflicts": 0,
+        "groundedness": 1.0,
+        "confidence": 0.77,
+        "conflict_ok": null,
+        "abstain_ok": null,
+        "faithfulness": 0.742,
+        "answer_relevance": 1.0,
+        "citation_quality": 0.8,
+        "completeness": 1.0,
+        "rationale": "heuristic mock judge (lexical overlap)"
+      },
+      {
+        "id": "q22",
+        "status": "answered",
+        "route": "web",
+        "events": [],
+        "latency_ms": 31,
+        "n_citations": 2,
+        "n_conflicts": 0,
+        "groundedness": 1.0,
+        "confidence": 0.69,
+        "conflict_ok": null,
+        "abstain_ok": null,
+        "faithfulness": 0.733,
+        "answer_relevance": 0.9,
+        "citation_quality": 0.75,
+        "completeness": 0.9,
+        "rationale": "heuristic mock judge (lexical overlap)"
+      },
+      {
+        "id": "q23",
+        "status": "answered",
+        "route": "both",
+        "events": [
+          "approval:confidential_data"
+        ],
+        "latency_ms": 66,
+        "n_citations": 5,
+        "n_conflicts": 1,
+        "groundedness": 1.0,
+        "confidence": 0.85,
+        "conflict_ok": null,
+        "abstain_ok": null,
+        "faithfulness": 0.598,
+        "answer_relevance": 0.857,
+        "citation_quality": 0.75,
+        "completeness": 1.0,
+        "rationale": "heuristic mock judge (lexical overlap)"
+      },
+      {
+        "id": "q24",
+        "status": "answered",
+        "route": "both",
+        "events": [],
+        "latency_ms": 59,
+        "n_citations": 7,
+        "n_conflicts": 1,
+        "groundedness": 1.0,
+        "confidence": 0.9,
+        "conflict_ok": true,
+        "abstain_ok": null,
+        "faithfulness": 0.67,
+        "answer_relevance": 1.0,
+        "citation_quality": 0.867,
+        "completeness": 0.611,
+        "rationale": "heuristic mock judge (lexical overlap)"
+      },
+      {
+        "id": "q25",
+        "status": "answered",
+        "route": "both",
+        "events": [],
+        "latency_ms": 54,
+        "n_citations": 4,
+        "n_conflicts": 1,
+        "groundedness": 1.0,
+        "confidence": 0.9,
+        "conflict_ok": true,
+        "abstain_ok": null,
+        "faithfulness": 0.63,
+        "answer_relevance": 0.857,
+        "citation_quality": 0.778,
+        "completeness": 0.667,
+        "rationale": "heuristic mock judge (lexical overlap)"
+      },
+      {
+        "id": "q26",
+        "status": "answered",
+        "route": "both",
+        "events": [],
+        "latency_ms": 58,
+        "n_citations": 6,
+        "n_conflicts": 2,
+        "groundedness": 1.0,
+        "confidence": 0.9,
+        "conflict_ok": true,
+        "abstain_ok": null,
+        "faithfulness": 0.615,
+        "answer_relevance": 1.0,
+        "citation_quality": 0.846,
+        "completeness": 1.0,
+        "rationale": "heuristic mock judge (lexical overlap)"
+      },
+      {
+        "id": "q27",
+        "status": "answered",
+        "route": "both",
+        "events": [],
+        "latency_ms": 57,
+        "n_citations": 2,
+        "n_conflicts": 0,
+        "groundedness": 1.0,
+        "confidence": 0.69,
+        "conflict_ok": null,
+        "abstain_ok": null,
+        "faithfulness": 0.729,
+        "answer_relevance": 1.0,
+        "citation_quality": 0.6,
+        "completeness": 0.421,
+        "rationale": "heuristic mock judge (lexical overlap)"
+      },
+      {
+        "id": "q28",
+        "status": "answered",
+        "route": "internal",
+        "events": [
+          "clarification"
+        ],
+        "latency_ms": 61,
+        "n_citations": 4,
+        "n_conflicts": 0,
+        "groundedness": 1.0,
+        "confidence": 0.9,
+        "conflict_ok": null,
+        "abstain_ok": null,
+        "faithfulness": 0.774,
+        "answer_relevance": 1.0,
+        "citation_quality": 0.875,
+        "completeness": 1.0,
+        "rationale": "heuristic mock judge (lexical overlap)"
+      },
+      {
+        "id": "q29",
+        "status": "answered",
+        "route": "internal",
+        "events": [
+          "clarification"
+        ],
+        "latency_ms": 69,
+        "n_citations": 4,
+        "n_conflicts": 0,
+        "groundedness": 1.0,
+        "confidence": 0.9,
+        "conflict_ok": null,
+        "abstain_ok": null,
+        "faithfulness": 0.85,
+        "answer_relevance": 1.0,
+        "citation_quality": 0.889,
+        "completeness": 0.875,
+        "rationale": "heuristic mock judge (lexical overlap)"
+      },
+      {
+        "id": "q30",
+        "status": "answered",
+        "route": "internal",
+        "events": [],
+        "latency_ms": 45,
+        "n_citations": 0,
+        "n_conflicts": 0,
+        "groundedness": null,
+        "confidence": 0.1,
+        "conflict_ok": null,
+        "abstain_ok": true,
+        "faithfulness": 0.0,
+        "answer_relevance": 0.0,
+        "citation_quality": 0.0,
+        "completeness": 0.25,
+        "rationale": "heuristic mock judge (lexical overlap)"
+      }
+    ]
+  }
+}

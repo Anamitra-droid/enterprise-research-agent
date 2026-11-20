@@ -1,0 +1,93 @@
+[
+  {
+    "title": "[mock] PayNova cuts small-business card fees",
+    "url": "https://fintech-daily.example/2026/09/paynova-cuts-fees",
+    "published_date": "2026-09-02",
+    "keywords": ["paynova", "pricing", "fees", "competitor"],
+    "content": "PayNova announced a new standard plan for small businesses. PayNova now charges 1.9% + $0.20 per domestic card transaction, down from its previous price. PayNova also launched a card issuing beta for selected merchants. Analysts expect pricing pressure across SMB payment processing. (Mock article for offline demos.)"
+  },
+  {
+    "title": "[mock] Brightwire raises processing prices for mid-market merchants",
+    "url": "https://payments-wire.example/brightwire-pricing-2026",
+    "published_date": "2026-03-10",
+    "keywords": ["brightwire", "pricing", "fees", "competitor"],
+    "content": "Brightwire raised its published pricing in March 2026. Brightwire now charges 2.9% + $0.30 per domestic card transaction. The company said the increase funds new reconciliation and treasury features. Brightwire has about 90 employees. (Mock article for offline demos.)"
+  },
+  {
+    "title": "[mock] Federal Reserve holds federal funds target range",
+    "url": "https://markets-monitor.example/fed-decision-october-2026",
+    "published_date": "2026-10-29",
+    "keywords": ["fed", "federal reserve", "interest rate", "fed funds", "rates"],
+    "content": "The Federal Reserve held the federal funds target range at 3.50% to 3.75% at its October 2026 meeting. Officials signalled that further rate cuts depend on inflation data. Money market yields have fallen accordingly. (Mock article with fictional figures for offline demos.)"
+  },
+  {
+    "title": "[mock] Real-time payments adoption trends 2026",
+    "url": "https://fintech-daily.example/2026/real-time-payments-trends",
+    "published_date": "2026-08-14",
+    "keywords": ["real-time payments", "instant payments", "fednow", "adoption", "trends"],
+    "content": "Real-time payments adoption accelerated in 2026. More than 1,500 US financial institutions now participate in FedNow, and instant payment volumes in the EU grew sharply after the Instant Payments Regulation deadlines. Businesses increasingly use instant payouts for gig workers and marketplaces. Pay-by-bank is gaining share in e-commerce checkout. (Mock article for offline demos.)"
+  },
+  {
+    "title": "[mock] EU PSD3 and Payment Services Regulation: where things stand",
+    "url": "https://eu-reg-tracker.example/psd3-psr-status",
+    "published_date": "2026-06-20",
+    "keywords": ["psd3", "psr", "regulation", "eu", "payment services"],
+    "content": "EU institutions reached a provisional agreement on PSD3 and the Payment Services Regulation (PSR) in 2025. PSD3 is now expected to apply from 2027 at the earliest, with an 18-month transition period. Key changes include stronger fraud liability rules, IBAN-name verification and new open banking dashboard requirements. (Mock summary for offline demos.)"
+  },
+  {
+    "title": "[mock] Visa replaces dispute monitoring programme with VAMP",
+    "url": "https://card-network-news.example/visa-vamp",
+    "published_date": "2025-06-01",
+    "keywords": ["visa", "chargeback", "dispute", "vdmp", "vamp", "threshold"],
+    "content": "Visa replaced its dispute monitoring programme (VDMP) with the Visa Acquirer Monitoring Program (VAMP) in 2025. Under VAMP, merchants with a chargeback ratio of 1.5% or higher are flagged as excessive, replacing the earlier 0.9% threshold. Acquirers face fees for merchants above the threshold. (Mock article for offline demos.)"
+  },
+  {
+    "title": "[mock] FATF updates guidance on risk-based AML supervision",
+    "url": "https://aml-insights.example/fatf-guidance-2026",
+    "published_date": "2026-04-11",
+    "keywords": ["fatf", "aml", "kyc", "guidance", "risk-based", "compliance"],
+    "content": "The FATF published updated guidance on the risk-based approach for payment service providers. The guidance emphasises ongoing transaction monitoring, beneficial ownership verification at the 25% threshold and timely suspicious activity reporting. It recommends periodic reviews proportionate to customer risk. (Mock summary for offline demos.)"
+  },
+  {
+    "title": "[mock] PCI DSS v4.0 future-dated requirements now mandatory",
+    "url": "https://security-weekly.example/pci-dss-4-requirements",
+    "published_date": "2025-04-02",
+    "keywords": ["pci dss", "pci", "security", "compliance", "card data"],
+    "content": "The future-dated requirements of PCI DSS v4.0 became mandatory on 31 March 2025. They include targeted risk analyses, authenticated internal vulnerability scans and stronger MFA for all access into the cardholder data environment. (Mock summary for offline demos.)"
+  },
+  {
+    "title": "[mock] CFPB open banking rule: implementation timeline",
+    "url": "https://us-reg-tracker.example/cfpb-1033",
+    "published_date": "2026-05-05",
+    "keywords": ["cfpb", "1033", "open banking", "data rights", "regulation"],
+    "content": "The CFPB finalised its Section 1033 personal financial data rights rule, with compliance dates phased in by institution size. Revisions to the rule were proposed in 2026 after industry feedback. (Mock summary for offline demos.)"
+  },
+  {
+    "title": "[mock] Fintech funding rebounds in Q3 2026",
+    "url": "https://vc-pulse.example/fintech-q3-2026",
+    "published_date": "2026-10-10",
+    "keywords": ["fintech", "funding", "venture", "market", "investment"],
+    "content": "Global fintech funding rose 22% quarter over quarter in Q3 2026, led by payments infrastructure and B2B card issuing companies. Valuations remain below 2021 peaks. (Mock article for offline demos.)"
+  },
+  {
+    "title": "[mock] Embedded finance and card issuing market outlook",
+    "url": "https://fintech-daily.example/2026/card-issuing-outlook",
+    "published_date": "2026-07-22",
+    "keywords": ["card issuing", "embedded finance", "market", "outlook", "virtual cards"],
+    "content": "The B2B card issuing market is projected to grow about 20% annually through 2030, driven by virtual cards for vendor payments and expense management. Competition among issuing platforms is increasing pricing pressure on interchange revenue. (Mock article for offline demos.)"
+  },
+  {
+    "title": "[mock] GDPR enforcement trends in financial services",
+    "url": "https://privacy-watch.example/gdpr-fines-2026",
+    "published_date": "2026-09-15",
+    "keywords": ["gdpr", "privacy", "fines", "data protection", "breach"],
+    "content": "European regulators issued record GDPR fines to financial services firms in 2026, most often for inadequate security and late breach notification. GDPR requires notifying the supervisory authority within 72 hours of becoming aware of a personal data breach. (Mock article for offline demos.)"
+  },
+  {
+    "title": "[mock] Hybrid work trends at fintech companies",
+    "url": "https://workplace-trends.example/fintech-hybrid-2026",
+    "published_date": "2026-03-30",
+    "keywords": ["hybrid work", "remote", "office", "employees", "trends"],
+    "content": "Most fintech companies now require employees in the office 3 days per week, up from 2 days in 2024. Home office stipends have become less common. (Mock article for offline demos.)"
+  }
+]

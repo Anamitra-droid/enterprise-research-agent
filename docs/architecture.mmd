@@ -1,0 +1,69 @@
+flowchart TB
+    subgraph Clients
+        CLI["CLI (typer + rich)"]
+        HTTP["HTTP clients / Swagger UI"]
+    end
+
+    subgraph API["FastAPI service"]
+        R1["POST /chat"]
+        R2["POST /chat/{id}/resume"]
+        R3["/approvals"]
+        R4["/documents"]
+        R5["/health · /metrics · /audit"]
+    end
+
+    SVC["ResearchService<br/>(threads, interrupts → API status,<br/>approval queue, audit)"]
+
+    subgraph GRAPH["LangGraph agent graph (typed Pydantic state)"]
+        direction TB
+        CTX["Contextualizer<br/>summarise history · rewrite follow-ups"]
+        CLS{"Router / Classifier<br/>internal · web · both · clarify · direct"}
+        CLR["Clarify ⏸<br/>interrupt"]
+        DIR["Direct reply"]
+        PRV["Privacy guard ⏸<br/>HITL if web query leaks<br/>confidential terms"]
+        RAG["Internal RAG agent"]
+        WEB["Web research agent"]
+        VAL{"Validator<br/>relevance grading"}
+        REF["Reformulator<br/>(retry on empty results)"]
+        CON["Conflict detector<br/>internal vs external"]
+        SYN["Synthesizer<br/>cited answer + claims"]
+        GRD{"Groundedness checker<br/>hallucination detection"}
+        APR["Approval gate ⏸<br/>confidential sources /<br/>low confidence"]
+        FIN["Finalizer<br/>conflicts · sources · warnings"]
+
+        CTX --> CLS
+        CLS -- ambiguous --> CLR --> CLS
+        CLS -- small talk --> DIR
+        CLS -- retrieval --> PRV
+        PRV -- parallel fan-out --> RAG & WEB
+        RAG --> VAL
+        WEB --> VAL
+        VAL -- "nothing relevant (≤1 retry)" --> REF --> PRV
+        VAL -- "internal + web" --> CON --> SYN
+        VAL -- "single source" --> SYN
+        SYN --> GRD
+        GRD -- "unsupported claims (≤1 regen)" --> SYN
+        GRD --> APR --> FIN
+    end
+
+    subgraph Providers
+        LLM["Claude via langchain-anthropic<br/>Sonnet 5.5 (smart) · Haiku 5.5 (fast)<br/>or offline MockLLM"]
+        TAV["Tavily web search<br/>or offline fixtures"]
+    end
+
+    subgraph Storage
+        CHR[("ChromaDB<br/>vectors + metadata<br/>bge-small embeddings")]
+        CKP[("SQLite<br/>LangGraph checkpoints")]
+        APP[("SQLite<br/>threads · approvals · audit ·<br/>node/LLM/tool metrics")]
+    end
+
+    CLI --> API
+    HTTP --> API
+    API --> SVC --> GRAPH
+    SVC --> APP
+    GRAPH -. checkpoints .-> CKP
+    RAG --> CHR
+    R4 -. "after approval" .-> CHR
+    WEB --> TAV
+    CLS & VAL & CON & SYN & GRD & CTX -.-> LLM
+    GRAPH -. "node timings" .-> APP

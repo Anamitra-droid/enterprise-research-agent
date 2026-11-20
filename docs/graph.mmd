@@ -1,0 +1,47 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	contextualize(contextualize)
+	classify(classify)
+	clarify(clarify)
+	respond_direct(respond_direct)
+	privacy_guard(privacy_guard)
+	retrieve_internal(retrieve_internal)
+	search_web(search_web)
+	validate(validate)
+	reformulate(reformulate)
+	detect_conflicts(detect_conflicts)
+	synthesize(synthesize)
+	check_groundedness(check_groundedness)
+	approval_gate(approval_gate)
+	finalize(finalize)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> contextualize;
+	approval_gate --> finalize;
+	check_groundedness -.-> approval_gate;
+	check_groundedness -.-> synthesize;
+	clarify --> classify;
+	classify -.-> clarify;
+	classify -.-> privacy_guard;
+	classify -.-> respond_direct;
+	contextualize --> classify;
+	detect_conflicts --> synthesize;
+	privacy_guard -.-> retrieve_internal;
+	privacy_guard -.-> search_web;
+	reformulate --> privacy_guard;
+	retrieve_internal --> validate;
+	search_web --> validate;
+	synthesize -.-> approval_gate;
+	synthesize -.-> check_groundedness;
+	validate -.-> detect_conflicts;
+	validate -.-> reformulate;
+	validate -.-> synthesize;
+	finalize --> __end__;
+	respond_direct --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc
