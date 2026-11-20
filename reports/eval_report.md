@@ -1,7 +1,7 @@
 # Evaluation Report
 
 - LLM: `mock` · Web search: `mock` · Embeddings: `huggingface`
-- Golden set: 30 questions · generated 2026-11-20 18:44:14
+- Golden set: 30 questions · generated 2026-11-20 20:11:34
 
 ## Retrieval (document level)
 
@@ -34,7 +34,7 @@ Accuracy: **0.9** (n=30)
 | groundedness | 1.0 |
 | conflict_detection_rate | 1.0 |
 | abstention_rate_on_unanswerable | 1.0 |
-| avg_latency_ms | 49.8 |
+| avg_latency_ms | 64.833 |
 
 ### Per question
 
@@ -71,4 +71,4 @@ Accuracy: **0.9** (n=30)
 | q29 | answered | internal | 4 | 0 | 0.85 | 1.0 | 0.889 | 0.875 | clarification |
 | q30 | answered | internal | 0 | 0 | 0.0 | 0.0 | 0.0 | 0.25 |  |
 
-> Note: run in offline **mock** mode, so routing, synthesis and judging are keyword heuristics. Set `ANTHROPIC_API_KEY` (and `TAVILY_API_KEY`) for real scores.
+> Note: run in offline **mock** mode, so routing, synthesis and judging are keyword heuristics. Set `OPENROUTER_API_KEY` (and `TAVILY_API_KEY`) for real scores.

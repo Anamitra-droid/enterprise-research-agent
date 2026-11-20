@@ -2,9 +2,9 @@
 
 A multi-agent research assistant for a (fictional) fintech company, **LedgerLeaf Payments**. It answers natural-language questions from **internal company documents (RAG)** and the **web**, cites every claim, flags **conflicts** between internal and external sources, **asks for clarification** when a question is ambiguous, remembers **conversation context**, and pauses for **human approval** on sensitive operations.
 
-Built with **LangGraph** (orchestration) · **LangChain** (Anthropic, Tavily, Chroma, HuggingFace integrations) · **FastAPI** · **ChromaDB** · **Pydantic** · **SQLite** · **Claude** (Sonnet 5.5 + Haiku 5.5).
+Built with **LangGraph** (orchestration) · **LangChain** (OpenAI-compatible, Tavily, Chroma, HuggingFace integrations) · **FastAPI** · **ChromaDB** · **Pydantic** · **SQLite** · LLMs via **OpenRouter** (default: Claude Sonnet 5.5 + Haiku 5.5; any model with structured outputs works).
 
-> **Runs without API keys.** With no keys, the system uses an offline heuristic LLM and a labelled fictional web corpus, so the API, demo, tests and CI all work out of the box. Add `ANTHROPIC_API_KEY` and `TAVILY_API_KEY` for the real thing.
+> **Runs without API keys.** With no keys, the system uses an offline heuristic LLM and a labelled fictional web corpus, so the API, demo, tests and CI all work out of the box. Add `OPENROUTER_API_KEY` and `TAVILY_API_KEY` for the real thing.
 
 ![architecture](docs/architecture.png)
 
@@ -48,7 +48,7 @@ Prerequisites: Python 3.11–3.13 and [uv](https://docs.astral.sh/uv/) (`pip ins
 
 ```bash
 uv sync --extra local-embeddings     # install (includes sentence-transformers for local embeddings)
-cp .env.example .env                 # optional: add ANTHROPIC_API_KEY / TAVILY_API_KEY
+cp .env.example .env                 # optional: add OPENROUTER_API_KEY / TAVILY_API_KEY
 uv run research-agent ingest --reset # build the vector index (downloads bge-small, ~130MB, once)
 uv run research-agent serve          # API on http://127.0.0.1:8000, Swagger UI at /docs
 ```
@@ -60,7 +60,7 @@ uv run research-agent chat                          # interactive CLI chat (in-p
 uv run research-agent chat --url http://127.0.0.1:8000   # CLI against a running server
 uv run python scripts/demo.py                       # run the 10 demo scenarios -> docs/DEMO.md
 uv run python -m research_agent.evaluation          # evaluation -> reports/eval_report.md
-uv run pytest                                       # 54 offline unit + integration tests
+uv run pytest                                       # 55 offline unit + integration tests
 uv run pytest -m live                               # end-to-end tests with real APIs (needs keys)
 ```
 
@@ -74,7 +74,8 @@ A `Makefile` wraps these (`make install ingest serve chat demo eval test`).
 
 | Variable | Effect |
 |---|---|
-| `ANTHROPIC_API_KEY` | switches the LLM from the offline mock to Claude (`SMART_MODEL=claude-sonnet-5-5`, `FAST_MODEL=claude-haiku-5-5`) |
+| `OPENROUTER_API_KEY` | switches the LLM from the offline mock to OpenRouter (`SMART_MODEL=anthropic/claude-sonnet-5.5`, `FAST_MODEL=anthropic/claude-haiku-5.5` by default; change them to any OpenRouter model id that supports structured outputs) |
+| `OPENROUTER_FALLBACK_MODELS` | optional JSON list of models OpenRouter falls back to if the primary fails |
 | `TAVILY_API_KEY` | switches web search from fixtures to Tavily (free tier at tavily.com) |
 | `LANGSMITH_TRACING=true` + `LANGSMITH_API_KEY` | full LangGraph traces in LangSmith |
 
@@ -135,7 +136,7 @@ The knowledge base (`data/docs/`, 21 docs) includes deliberately **stale** docum
 src/research_agent/
   agents/        one module per agent + prompts.py + deps.py
   graph/         state.py (typed state, reducers) · builder.py (nodes, routing)
-  llm/           base interface · anthropic_llm.py · mock_llm.py (offline heuristics)
+  llm/           base interface · openrouter_llm.py · mock_llm.py (offline heuristics)
   rag/           loader.py · embeddings.py · vectorstore.py
   tools/         web_search.py
   api/           app.py (FastAPI)
@@ -163,7 +164,7 @@ docs/             ARCHITECTURE.md · API.md · DEMO.md · *.mmd diagrams
 | conflict detection rate (3 seeded conflicts) | 1.0 |
 | abstention on unanswerable question | 1.0 |
 
-Answer-quality judge scores in mock mode are heuristic. Run with an Anthropic key for real LLM-as-judge numbers.
+Answer-quality judge scores in mock mode are heuristic. Run with an OpenRouter key for real LLM-as-judge numbers.
 
 ## Limitations and next steps
 

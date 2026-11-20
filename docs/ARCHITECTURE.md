@@ -52,7 +52,7 @@ flowchart TB
     end
 
     subgraph Providers
-        LLM["Claude via langchain-anthropic<br/>Sonnet 5.5 (smart) · Haiku 5.5 (fast)<br/>or offline MockLLM"]
+        LLM["OpenRouter via langchain-openai<br/>default Claude Sonnet 5.5 (smart) ·<br/>Haiku 5.5 (fast) · or offline MockLLM"]
         TAV["Tavily web search<br/>or offline fixtures"]
     end
 
@@ -134,7 +134,7 @@ To export PNGs: `npx @mermaid-js/mermaid-cli -i docs/architecture.mmd -o docs/ar
 - **Conversation-level** fields persist across turns: `messages` (with the `add_messages` reducer, so old messages are removed with `RemoveMessage` when summarised), `summary`, `user_id`.
 - **Turn-level** fields (`route`, queries, evidence, draft, groundedness, conflicts...) are reset by `fresh_turn_input()` at every new user message.
 - `warnings`, `trace` and `approvals` use a custom `append_or_reset` reducer, so parallel branches can append safely and a new turn can reset them.
-- All LLM outputs are typed Pydantic models (`schemas.py`) produced with Claude's native structured outputs (`method="json_schema"`).
+- All LLM outputs are typed Pydantic models (`schemas.py`) produced with native JSON-schema structured outputs (`method="json_schema"`, OpenAI `response_format`) through OpenRouter.
 
 Checkpoints are written to SQLite by `SqliteSaver` after every superstep, so a thread paused at an interrupt survives a server restart (see `test_conversation_survives_service_restart`). The serializer is given an explicit allow-list of our Pydantic types.
 
@@ -179,6 +179,6 @@ Checkpoints are written to SQLite by `SqliteSaver` after every superstep, so a t
 
 - **Deterministic pipeline + router, not a free-form supervisor.** Easier to test, reason about and diagram; the conditional edges still give the agentic loops (clarify, reformulate, regenerate).
 - **Provider abstraction with an offline mock.** Every agent calls `llm.structured(schema, ..., context=...)`. The mock uses `context` to produce heuristic outputs, so the whole system (API, demo, CI tests) runs without API keys, and tests can script failures per agent (`tests/conftest.py::ScriptedLLM`).
-- **Claude-specific choices**: native structured outputs (`json_schema`) because Sonnet 5.5 rejects forced `tool_choice`; no `temperature` (non-default sampling params are rejected); refusals are non-retryable; optional server-side refusal fallback (`ANTHROPIC_SERVER_FALLBACK`).
-- **Two model tiers**: Haiku for high-volume classification and grading, Sonnet for synthesis and conflict reasoning.
+- **OpenRouter as the LLM gateway**: one OpenAI-compatible API (`langchain-openai` `ChatOpenAI` with `base_url=https://openrouter.ai/api/v1`) gives access to many providers; swap models with `SMART_MODEL` / `FAST_MODEL`. Requests set `provider.require_parameters=true` so OpenRouter only routes to providers that support JSON-schema structured outputs, send no `temperature` (current Claude models reject non-default sampling params) and no forced `tool_choice`, and can list `OPENROUTER_FALLBACK_MODELS` for server-side model fallback. Refusals and 4xx errors such as 402 (out of credits) are non-retryable; malformed JSON output is retried.
+- **Two model tiers**: a fast, cheap model (default Haiku 5.5) for high-volume classification and grading, a stronger one (default Sonnet 5.5) for synthesis and conflict reasoning.
 - **Separate internal and web queries** so internal context can be used to search the KB without leaking it externally.

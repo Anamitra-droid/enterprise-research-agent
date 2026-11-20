@@ -122,7 +122,7 @@ returns `{"status": "pending_approval", "approval_id": "...", "doc_id": "crypto-
 
 ### `GET /health`
 
-`{status, version, llm: anthropic|mock, web_search: tavily|mock, embeddings, kb_chunks}`
+`{status, version, llm: openrouter|mock, web_search: tavily|mock, embeddings, kb_chunks}`
 
 ### `GET /metrics`
 
@@ -130,7 +130,7 @@ returns `{"status": "pending_approval", "approval_id": "...", "doc_id": "crypto-
 {
   "turns": 12,
   "nodes": [{"node": "synthesize", "runs": 11, "avg_ms": 2310.4, "max_ms": 5120.0, "errors": 0}],
-  "llm": [{"purpose": "synthesize", "model": "claude-sonnet-5-5", "calls": 11, "input_tokens": 42000, "output_tokens": 6100, "avg_ms": 2290.1, "failures": 0}],
+  "llm": [{"purpose": "synthesize", "model": "anthropic/claude-sonnet-5.5", "calls": 11, "input_tokens": 42000, "output_tokens": 6100, "avg_ms": 2290.1, "failures": 0}],
   "tools": [{"tool": "web_search", "status": "retry", "n": 1}],
   "approvals": [{"approval_type": "confidential_data", "status": "approved", "n": 1}]
 }

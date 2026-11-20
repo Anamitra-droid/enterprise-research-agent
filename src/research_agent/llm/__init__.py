@@ -3,10 +3,10 @@ from research_agent.llm.base import LLMClient
 
 
 def build_llm(settings: Settings) -> LLMClient:
-    if settings.resolved_llm_provider == "anthropic":
-        from research_agent.llm.anthropic_llm import AnthropicLLM
+    if settings.resolved_llm_provider == "openrouter":
+        from research_agent.llm.openrouter_llm import OpenRouterLLM
 
-        return AnthropicLLM(settings)
+        return OpenRouterLLM(settings)
     from research_agent.llm.mock_llm import MockLLM
 
     return MockLLM()

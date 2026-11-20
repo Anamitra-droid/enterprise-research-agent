@@ -36,7 +36,7 @@ class NonRetryableError(Exception):
 def _is_retryable(exc: BaseException) -> bool:
     if isinstance(exc, NonRetryableError):
         return False
-    # Anthropic SDK: retry rate limits, overload, timeouts, connection and 5xx errors; not 4xx.
+    # OpenAI-compatible SDK (OpenRouter): retry rate limits, timeouts, connection and 5xx errors; not 4xx (e.g. 402 no credits).
     status = getattr(exc, "status_code", None)
     if isinstance(status, int) and 400 <= status < 500 and status not in (408, 409, 429):
         return False

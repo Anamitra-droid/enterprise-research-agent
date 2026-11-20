@@ -1,8 +1,8 @@
 # Demonstration: Query Scenarios
 
-Generated 2026-11-20 18:37 · LLM: `mock` · web search: `mock` · embeddings: `huggingface` · KB chunks: 72
+Generated 2026-11-20 20:11 · LLM: `mock` · web search: `mock` · embeddings: `huggingface` · KB chunks: 72
 
-> ℹ️ Generated in **offline mock mode** (no API keys): routing/synthesis are keyword heuristics and the answers are extractive; web results come from a labelled fictional fixture corpus. With `ANTHROPIC_API_KEY` and `TAVILY_API_KEY` set, the same script produces real LLM answers and live web results.
+> ℹ️ Generated in **offline mock mode** (no API keys): routing/synthesis are keyword heuristics and the answers are extractive; web results come from a labelled fictional fixture corpus. With `OPENROUTER_API_KEY` and `TAVILY_API_KEY` set, the same script produces real LLM answers and live web results.
 
 
 ---
@@ -17,7 +17,7 @@ _Routed to internal retrieval only; every claim cites internal documents._
   "message": "What is our parental leave policy and how many PTO days do employees get?"
 }
 ```
-**Status:** `answered` · **route:** `internal` · **confidence:** `0.9` · **groundedness:** `1.0` · **latency:** 221 ms
+**Status:** `answered` · **route:** `internal` · **confidence:** `0.9` · **groundedness:** `1.0` · **latency:** 201 ms
 
 **Agent trace:** `contextualize → classify → privacy_guard → retrieve_internal → validate → synthesize → check_groundedness → approval_gate → finalize`
 
@@ -53,7 +53,7 @@ _Needs current public information, so routed to web search only._
   "message": "What are the latest trends in real-time payments adoption?"
 }
 ```
-**Status:** `answered` · **route:** `web` · **confidence:** `0.77` · **groundedness:** `1.0` · **latency:** 31 ms
+**Status:** `answered` · **route:** `web` · **confidence:** `0.77` · **groundedness:** `1.0` · **latency:** 102 ms
 
 **Agent trace:** `contextualize → classify → privacy_guard → search_web → validate → synthesize → check_groundedness → approval_gate → finalize`
 
@@ -84,7 +84,7 @@ _Needs internal competitor analysis AND current web data. Internal and web retri
   "message": "How do PayNova's current fees compare to our pricing?"
 }
 ```
-**Status:** `answered` · **route:** `both` · **confidence:** `0.9` · **groundedness:** `1.0` · **latency:** 51 ms
+**Status:** `answered` · **route:** `both` · **confidence:** `0.9` · **groundedness:** `1.0` · **latency:** 95 ms
 
 **Agent trace:** `contextualize → classify → privacy_guard → retrieve_internal → search_web → validate → detect_conflicts → synthesize → check_groundedness → approval_gate → finalize`
 
@@ -152,7 +152,7 @@ _The treasury policy (Jan 2024) assumes a 5.25–5.50% Fed funds rate; the web s
   "message": "Is our treasury Fed funds rate assumption still valid given the current Fed rate?"
 }
 ```
-**Status:** `answered` · **route:** `both` · **confidence:** `0.9` · **groundedness:** `1.0` · **latency:** 58 ms
+**Status:** `answered` · **route:** `both` · **confidence:** `0.9` · **groundedness:** `1.0` · **latency:** 80 ms
 
 **Agent trace:** `contextualize → classify → privacy_guard → retrieve_internal → search_web → validate → detect_conflicts → synthesize → check_groundedness → approval_gate → finalize`
 
@@ -211,20 +211,20 @@ _The classifier asks a clarifying question; the graph pauses and resumes from it
   "message": "What's the limit?"
 }
 ```
-**Status:** `needs_clarification` · **route:** `clarify` · **confidence:** `None` · **groundedness:** `None` · **latency:** 12 ms
+**Status:** `needs_clarification` · **route:** `clarify` · **confidence:** `None` · **groundedness:** `None` · **latency:** 17 ms
 
 **Agent trace:** `contextualize → classify`
 
 > 🤔 **Clarification requested:** Which limit do you mean: (a) API rate limits, (b) card spending/velocity limits, or (c) KYC/AML transaction thresholds?
 
 
-**User clarifies** `POST /chat/thr_64171b72e9cb/resume`
+**User clarifies** `POST /chat/thr_70b191c844f2/resume`
 ```json
 {
   "answer": "The API rate limit"
 }
 ```
-**Status:** `answered` · **route:** `internal` · **confidence:** `0.9` · **groundedness:** `1.0` · **latency:** 65 ms
+**Status:** `answered` · **route:** `internal` · **confidence:** `0.9` · **groundedness:** `1.0` · **latency:** 72 ms
 
 **Agent trace:** `contextualize → classify → clarify → classify → privacy_guard → retrieve_internal → validate → synthesize → check_groundedness → approval_gate → finalize`
 
@@ -258,7 +258,7 @@ _The follow-up uses a pronoun; the contextualizer rewrites it into a standalone 
   "message": "What uptime does our SLA guarantee?"
 }
 ```
-**Status:** `answered` · **route:** `internal` · **confidence:** `0.61` · **groundedness:** `1.0` · **latency:** 102 ms
+**Status:** `answered` · **route:** `internal` · **confidence:** `0.61` · **groundedness:** `1.0` · **latency:** 68 ms
 
 **Agent trace:** `contextualize → classify → privacy_guard → retrieve_internal → validate → synthesize → check_groundedness → approval_gate → finalize`
 
@@ -277,10 +277,10 @@ _The follow-up uses a pronoun; the contextualizer rewrites it into a standalone 
 ```json
 {
   "message": "And what service credits do customers get if we miss it?",
-  "thread_id": "thr_43b8d3193490"
+  "thread_id": "thr_f4a8ec581447"
 }
 ```
-**Status:** `answered` · **route:** `internal` · **confidence:** `0.9` · **groundedness:** `1.0` · **latency:** 48 ms
+**Status:** `answered` · **route:** `internal` · **confidence:** `0.9` · **groundedness:** `1.0` · **latency:** 67 ms
 
 **Agent trace:** `contextualize → classify → privacy_guard → retrieve_internal → validate → synthesize → check_groundedness → approval_gate → finalize`
 
@@ -315,11 +315,11 @@ _The answer relies on CONFIDENTIAL documents, so a reviewer must approve before 
   "user_id": "analyst-42"
 }
 ```
-**Status:** `pending_approval` · **route:** `internal` · **confidence:** `None` · **groundedness:** `None` · **latency:** 36 ms
+**Status:** `pending_approval` · **route:** `internal` · **confidence:** `None` · **groundedness:** `None` · **latency:** 55 ms
 
 **Agent trace:** `contextualize → classify → privacy_guard → retrieve_internal → validate → synthesize → check_groundedness`
 
-> 🛑 **Approval required** (`confidential_data`, id `apr_213450a499947bad`): Answer uses CONFIDENTIAL documents: board-minutes-q3-2026, project-falcon
+> 🛑 **Approval required** (`confidential_data`, id `apr_b4708dac4de773c0`): Answer uses CONFIDENTIAL documents: board-minutes-q3-2026, project-falcon
 
 
 Reviewer checks the queue:
@@ -327,7 +327,7 @@ Reviewer checks the queue:
 ```json
 [
   {
-    "approval_id": "apr_213450a499947bad",
+    "approval_id": "apr_b4708dac4de773c0",
     "approval_type": "confidential_data",
     "status": "pending",
     "reason": "Answer uses CONFIDENTIAL documents: board-minutes-q3-2026, project-falcon"
@@ -335,7 +335,7 @@ Reviewer checks the queue:
 ]
 ```
 
-**Reviewer approves** `POST /approvals/apr_213450a499947bad`
+**Reviewer approves** `POST /approvals/apr_b4708dac4de773c0`
 ```json
 {
   "decision": "approve",
@@ -343,9 +343,9 @@ Reviewer checks the queue:
   "comment": "OK for deal-team analyst"
 }
 ```
-Approval `apr_213450a499947bad` → **approved**; the paused conversation resumes:
+Approval `apr_b4708dac4de773c0` → **approved**; the paused conversation resumes:
 
-**Status:** `answered` · **route:** `internal` · **confidence:** `0.85` · **groundedness:** `1.0` · **latency:** 8 ms
+**Status:** `answered` · **route:** `internal` · **confidence:** `0.85` · **groundedness:** `1.0` · **latency:** 15 ms
 
 **Agent trace:** `contextualize → classify → privacy_guard → retrieve_internal → validate → synthesize → check_groundedness → approval_gate → finalize`
 
@@ -378,14 +378,14 @@ _The web query would leak a confidential codename to an external search engine. 
   "message": "Search the web for the latest news about Project Falcon"
 }
 ```
-**Status:** `pending_approval` · **route:** `both` · **confidence:** `None` · **groundedness:** `None` · **latency:** 16 ms
+**Status:** `pending_approval` · **route:** `both` · **confidence:** `None` · **groundedness:** `None` · **latency:** 18 ms
 
 **Agent trace:** `contextualize → classify`
 
-> 🛑 **Approval required** (`external_search_privacy`, id `apr_cc98a8cec63d774f`): The external web search query contains confidential internal terms: Project Falcon.
+> 🛑 **Approval required** (`external_search_privacy`, id `apr_b97cc4da9eec5562`): The external web search query contains confidential internal terms: Project Falcon.
 
 
-**Reviewer rejects external search** `POST /chat/thr_c48ca8addc4c/resume`
+**Reviewer rejects external search** `POST /chat/thr_73024e65bd98/resume`
 ```json
 {
   "decision": "reject",
@@ -393,15 +393,15 @@ _The web query would leak a confidential codename to an external search engine. 
   "comment": "Codename must not leave the company"
 }
 ```
-**Status:** `pending_approval` · **route:** `both` · **confidence:** `None` · **groundedness:** `None` · **latency:** 32 ms
+**Status:** `pending_approval` · **route:** `both` · **confidence:** `None` · **groundedness:** `None` · **latency:** 65 ms
 
 **Agent trace:** `contextualize → classify → privacy_guard → retrieve_internal → validate → synthesize → check_groundedness`
 
-> 🛑 **Approval required** (`confidential_data`, id `apr_b8ef128ccc43b02f`): Answer uses CONFIDENTIAL documents: board-minutes-q3-2026, project-falcon
+> 🛑 **Approval required** (`confidential_data`, id `apr_d0a33f48e5cf4efe`): Answer uses CONFIDENTIAL documents: board-minutes-q3-2026, project-falcon
 
 - ⚠️ External web search was skipped: reviewer did not approve sending confidential terms externally.
 
-**Reviewer rejects confidential answer** `POST /chat/thr_c48ca8addc4c/resume`
+**Reviewer rejects confidential answer** `POST /chat/thr_73024e65bd98/resume`
 ```json
 {
   "decision": "reject",
@@ -409,7 +409,7 @@ _The web query would leak a confidential codename to an external search engine. 
   "comment": "requester not on deal team"
 }
 ```
-**Status:** `rejected` · **route:** `both` · **confidence:** `0.85` · **groundedness:** `1.0` · **latency:** 8 ms
+**Status:** `rejected` · **route:** `both` · **confidence:** `0.85` · **groundedness:** `1.0` · **latency:** 11 ms
 
 **Agent trace:** `contextualize → classify → privacy_guard → retrieve_internal → validate → synthesize → check_groundedness → approval_gate → finalize`
 
@@ -432,7 +432,7 @@ _Nothing in the sources answers the question, so the system abstains instead of 
   "message": "What is our policy on cryptocurrency staking rewards?"
 }
 ```
-**Status:** `answered` · **route:** `internal` · **confidence:** `0.1` · **groundedness:** `None` · **latency:** 39 ms
+**Status:** `answered` · **route:** `internal` · **confidence:** `0.1` · **groundedness:** `None` · **latency:** 71 ms
 
 **Agent trace:** `contextualize → classify → privacy_guard → retrieve_internal → validate → synthesize → approval_gate → finalize`
 
@@ -461,12 +461,12 @@ _Adding a document is a sensitive operation: it is queued until approved, then i
 ```json
 {
   "status": "pending_approval",
-  "approval_id": "apr_322c3c8143e1",
+  "approval_id": "apr_5a791b8fc64b",
   "doc_id": "crypto-policy"
 }
 ```
 
-**Approve** `POST /approvals/apr_322c3c8143e1`
+**Approve** `POST /approvals/apr_5a791b8fc64b`
 ```json
 {
   "decision": "approve",
@@ -475,7 +475,7 @@ _Adding a document is a sensitive operation: it is queued until approved, then i
 ```
 ```json
 {
-  "approval_id": "apr_322c3c8143e1",
+  "approval_id": "apr_5a791b8fc64b",
   "status": "approved",
   "result": {
     "doc_id": "crypto-policy",
@@ -490,7 +490,7 @@ _Adding a document is a sensitive operation: it is queued until approved, then i
   "message": "What is our policy on cryptocurrency staking rewards?"
 }
 ```
-**Status:** `answered` · **route:** `internal` · **confidence:** `0.61` · **groundedness:** `1.0` · **latency:** 41 ms
+**Status:** `answered` · **route:** `internal` · **confidence:** `0.61` · **groundedness:** `1.0` · **latency:** 69 ms
 
 **Agent trace:** `contextualize → classify → privacy_guard → retrieve_internal → validate → synthesize → check_groundedness → approval_gate → finalize`
 
@@ -513,18 +513,18 @@ _Aggregated metrics from `GET /metrics` after the demo run._
 
 | node | runs | avg ms | max ms | errors |
 |---|---|---|---|---|
-| approval_gate | 13 | 0.0 | 0.0 | 0 |
+| approval_gate | 13 | 0.0 | 0.1 | 0 |
 | classify | 12 | 0.1 | 0.4 | 0 |
-| privacy_guard | 12 | 0.1 | 0.4 | 0 |
-| contextualize | 11 | 0.0 | 0.1 | 0 |
-| finalize | 11 | 0.1 | 0.1 | 0 |
-| synthesize | 11 | 0.3 | 0.6 | 0 |
-| validate | 11 | 0.4 | 0.7 | 0 |
-| check_groundedness | 10 | 0.2 | 0.3 | 0 |
-| retrieve_internal | 10 | 39.8 | 191.5 | 0 |
-| search_web | 3 | 1.8 | 1.9 | 0 |
-| clarify | 2 | 0.0 | 0.1 | 0 |
-| detect_conflicts | 2 | 1.2 | 1.2 | 0 |
+| privacy_guard | 12 | 0.1 | 0.7 | 0 |
+| contextualize | 11 | 0.0 | 0.0 | 0 |
+| finalize | 11 | 0.2 | 1.4 | 0 |
+| synthesize | 11 | 0.4 | 0.9 | 0 |
+| validate | 11 | 0.5 | 0.8 | 0 |
+| check_groundedness | 10 | 0.3 | 0.6 | 0 |
+| retrieve_internal | 10 | 44.7 | 136.0 | 0 |
+| search_web | 3 | 4.3 | 8.5 | 0 |
+| clarify | 2 | 0.1 | 0.1 | 0 |
+| detect_conflicts | 2 | 2.1 | 2.6 | 0 |
 
 LLM usage: `[]`
 

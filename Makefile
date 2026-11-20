@@ -15,7 +15,7 @@ chat:           ## interactive CLI chat (in-process)
 test:           ## unit + integration tests (offline, no keys)
 	uv run pytest
 
-test-live:      ## end-to-end tests against real Anthropic + Tavily
+test-live:      ## end-to-end tests against real OpenRouter + Tavily
 	uv run pytest -m live
 
 lint:

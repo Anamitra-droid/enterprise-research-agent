@@ -138,7 +138,7 @@ def test_hallucinated_claims_trigger_regeneration(make_service):
 
 
 def test_llm_outage_in_synthesis_falls_back_to_extractive_answer(make_service):
-    llm = ScriptedLLM({"synthesize": RuntimeError("anthropic down")})
+    llm = ScriptedLLM({"synthesize": RuntimeError("openrouter down")})
     svc = make_service(llm=llm, hitl_low_confidence=False)
     r = svc.chat("How many PTO days do employees get?")
     assert r.status == "answered"

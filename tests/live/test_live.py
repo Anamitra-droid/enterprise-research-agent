@@ -1,7 +1,7 @@
-"""Live end-to-end tests against the real Anthropic + Tavily APIs.
+"""Live end-to-end tests against the real OpenRouter + Tavily APIs.
 
 Skipped by default. Run with:  pytest -m live
-Requires ANTHROPIC_API_KEY and TAVILY_API_KEY (in env or .env).
+Requires OPENROUTER_API_KEY and TAVILY_API_KEY (in env or .env).
 """
 
 from __future__ import annotations
@@ -18,8 +18,8 @@ pytestmark = pytest.mark.live
 @pytest.fixture(scope="module")
 def live_service():
     s = get_settings()
-    if s.resolved_llm_provider != "anthropic" or s.resolved_search_provider != "tavily":
-        pytest.skip("needs ANTHROPIC_API_KEY and TAVILY_API_KEY")
+    if s.resolved_llm_provider != "openrouter" or s.resolved_search_provider != "tavily":
+        pytest.skip("needs OPENROUTER_API_KEY and TAVILY_API_KEY")
     from research_agent.service import build_service
 
     os.environ.setdefault("LOG_LEVEL", "WARNING")

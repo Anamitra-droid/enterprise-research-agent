@@ -84,7 +84,7 @@ def main() -> None:
            f"embeddings: `{health['embeddings']}` · KB chunks: {health['kb_chunks']}\n")
         if health["llm"] == "mock":
             md("> ℹ️ Generated in **offline mock mode** (no API keys): routing/synthesis are keyword heuristics and the answers are "
-               "extractive; web results come from a labelled fictional fixture corpus. With `ANTHROPIC_API_KEY` and `TAVILY_API_KEY` "
+               "extractive; web results come from a labelled fictional fixture corpus. With `OPENROUTER_API_KEY` and `TAVILY_API_KEY` "
                "set, the same script produces real LLM answers and live web results.\n")
 
         scenario("1. Internal knowledge-base question (RAG)", "Routed to internal retrieval only; every claim cites internal documents.")

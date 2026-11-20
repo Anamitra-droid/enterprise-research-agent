@@ -180,7 +180,7 @@ def to_markdown(report: dict[str, Any]) -> str:
         ]
     if report["llm"] == "mock":
         lines += ["", "> Note: run in offline **mock** mode, so routing, synthesis and judging are keyword heuristics. "
-                  "Set `ANTHROPIC_API_KEY` (and `TAVILY_API_KEY`) for real scores."]
+                  "Set `OPENROUTER_API_KEY` (and `TAVILY_API_KEY`) for real scores."]
     return "\n".join(lines) + "\n"
 
 
